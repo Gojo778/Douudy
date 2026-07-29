@@ -245,3 +245,8 @@ height:400px;
 }
 
 }
+.gallery img.zoom{
+    transform: scale(1.25);
+    z-index: 999;
+    position: relative;
+}
