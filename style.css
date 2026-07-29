@@ -1,0 +1,247 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9ecf,#ffd6e8,#fff0f6);
+    overflow-x:hidden;
+    color:white;
+    min-height:100vh;
+}
+
+/* Pages */
+
+.page{
+    display:none;
+    min-height:100vh;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:30px;
+}
+
+.page.active{
+    display:flex;
+    animation:fade .8s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+p{
+    max-width:700px;
+    line-height:1.8;
+    font-size:1.1rem;
+    margin-bottom:30px;
+}
+
+/* Buttons */
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:18px;
+    background:#ff4f88;
+    color:white;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ff2d75;
+}
+
+/* Glass Card */
+
+.letter{
+    width:90%;
+    max-width:750px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+/* Flowers */
+
+.bouquet{
+    font-size:80px;
+    animation:bloom 2s infinite alternate;
+    margin:25px 0;
+}
+
+@keyframes bloom{
+
+    from{
+        transform:scale(.9) rotate(-3deg);
+    }
+
+    to{
+        transform:scale(1.1) rotate(3deg);
+    }
+
+}
+
+/* Gallery */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    width:90%;
+    max-width:1100px;
+    margin:30px auto;
+}
+
+.gallery img{
+
+    width:100%;
+    height:300px;
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* Floating Hearts */
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.hearts::before,
+.hearts::after{
+
+content:"❤️ ❤️ 💖 💕 💗";
+
+position:absolute;
+
+font-size:30px;
+
+animation:float 12s linear infinite;
+
+opacity:.5;
+
+}
+
+.hearts::after{
+
+left:60%;
+
+animation-duration:18s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(100vh);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+}
+
+}
+
+/* Final */
+
+#final h1{
+
+font-size:3.5rem;
+
+margin-bottom:25px;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+h1{
+
+font-size:2.2rem;
+
+}
+
+h2{
+
+font-size:1.6rem;
+
+}
+
+p{
+
+font-size:1rem;
+
+}
+
+button{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery img{
+
+height:400px;
+
+}
+
+}
