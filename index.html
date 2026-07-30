@@ -1,153 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Gift For Douuudy ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>For Douuudy ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 
-<audio id="music" loop>
-    <source src="music/take-over.mp3" type="audio/mp3">
-</audio>
-
 <!-- Floating Hearts -->
-<div class="hearts"></div>
 
-<!-- Welcome -->
-<section id="welcome" class="page active">
+<div class="floating-hearts"></div>
 
-    <h1>Hey Douuudy ❤️</h1>
+<!-- ===================== -->
+<!-- PAGE 1 -->
+<!-- Secret Lock -->
+<!-- ===================== -->
 
-    <p>
-        I made something special just for you.
-        Every click reveals another surprise.
-    </p>
+<section id="lockPage" class="page active">
 
-    <button id="startBtn">
-        Open My Gift 💖
-    </button>
+<div class="lock-card">
+
+<h1>🧸</h1>
+
+<h2>Hey Douuudy ❤️</h2>
+
+<p class="subtitle">
+
+A tiny surprise made with love...
+
+</p>
+
+<div class="secret-box">
+
+<h3>Enter The Secret Code</h3>
+
+<p class="hint">
+Hint: It's a special date ❤️
+</p>
+
+<div class="code-inputs">
+
+<input maxlength="2" id="c1" placeholder="07">
+
+<span>/</span>
+
+<input maxlength="2" id="c2" placeholder="06">
+
+<span>/</span>
+
+<input maxlength="2" id="c3" placeholder="08">
+
+</div>
+
+<p id="errorMsg"></p>
+
+<button id="unlockBtn">
+
+Unlock My Surprise ❤️
+
+</button>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- Flowers -->
-<section id="flowers" class="page">
+<!-- ===================== -->
+<!-- PAGE 2 -->
+<!-- LOVE LETTER -->
+<!-- ===================== -->
 
-    <h2>These flowers are for you 🌹</h2>
+<section id="letterPage" class="page">
 
-    <div class="bouquet">
-        🌹🌹🌹
-        🌹🌹🌹
-        🌹🌹🌹
-    </div>
+<div class="paper">
 
-    <p>
-        Every flower represents one reason
-        why you're amazing.
-    </p>
+<div class="paper-top">
 
-    <button id="letterBtn">
-        Open Letter 💌
-    </button>
+💌
 
-</section>
+</div>
 
-<!-- Letter -->
+<h2>
 
-<section id="letter" class="page">
+To My Beautiful Douuudy ❤️
 
-<div class="letter">
+</h2>
 
-<h2>To My Beautiful Douuudy ❤️</h2>
+<div class="letter-text">
 
 <p>
 
-From the moment you came into my life, you've brought a kind of happiness that's hard to put into words.
+My Dearest Douuudy,
 
-<br><br>
+</p>
 
-Your smile makes ordinary days feel special, and your kindness reminds me how lucky I am to know you.
+<p>
 
-<br><br>
+Sometimes words are never enough to explain how much someone means to us.
 
-No matter where life takes us, I hope you always remember how truly wonderful you are.
+But today...
 
-<br><br>
+I wanted to try.
 
-Thank you for being yourself.
+</p>
 
-Thank you for every smile.
+<p>
 
-Thank you for existing.
+Every smile you share...
 
-<br><br>
+Every little moment...
 
-With all my heart,
+Every memory...
 
-<br><br>
+Makes my world brighter.
 
-<b>Yassine ❤️</b>
+</p>
+
+<p>
+
+You are one of the most beautiful parts of my life,
+
+and I hope this little surprise makes you smile.
+
+</p>
+
+<p>
+
+Thank you for being exactly who you are.
+
+Never change.
+
+❤️
+
+</p>
+
+<p class="signature">
+
+Forever Yours,
+
+<br>
+
+Yassine ❤️
+
+</p>
+
+</div>
+
+<button id="flowersBtn">
+
+Continue 🌹
+
+</button>
+
+</div>
+
+</section>
+<!-- ===================== -->
+<!-- PAGE 3 -->
+<!-- FLOWERS -->
+<!-- ===================== -->
+
+<section id="flowersPage" class="page">
+
+<div class="flowers-container">
+
+<h2>These Flowers Are For You 🌸</h2>
+
+<p class="flower-text">
+
+Every flower here represents a reason
+why you're so special to me.
+
+</p>
+
+<div class="flower-card">
+
+
+
+</div>
+
+<button id="openEnvelope">
+
+Open The Letter 💌
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+<!-- PAGE 4 -->
+<!-- ENVELOPE -->
+<!-- ===================== -->
+
+<section id="envelopePage" class="page">
+
+<div class="envelope">
+
+<div class="envelope-cover">
+
+💌
+
+</div>
+
+<div class="inside-letter">
+
+<h2>Just For You ❤️</h2>
+
+<p>
+
+I hope these flowers bring
+a smile to your face.
+
+You deserve happiness,
+peace,
+love,
+and everything beautiful.
+
+Always remember...
+
+Someone is thinking about you.
 
 </p>
 
 <button id="galleryBtn">
-Our Memories 📸
+
+Continue 📸
+
 </button>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- Gallery -->
+<!-- ===================== -->
+<!-- PAGE 5 -->
+<!-- MY BABY -->
+<!-- ===================== -->
 
-<section id="gallery" class="page">
+<section id="galleryPage" class="page">
 
-<h2>Our Memories ❤️</h2>
+<h2 class="gallery-title">
 
-<div class="gallery">
+My Baby ❤️
 
-<img src="D2B49C72-E9EA-4BE4-BB71-4470053CB15A.jpeg">
-<img src="DA1B6C01-DC7E-4B61-BB84-F59BD89A79AE.jpeg">
-<img src="FDC025EA-4B37-4A5D-B69C-D152A5489985.jpeg">
-<img src="IMG_9662.jpeg">
-<img src="IMG_9663.jpeg">
-
-</div>
-
-<button id="endBtn">
-Final Surprise ❤️
-</button>
-
-</section>
-
-<!-- Final -->
-
-<section id="final" class="page">
-
-<h1>I Hope This Made You Smile ❤️</h1>
+</h2>
 
 <p>
 
-No matter where life takes us,
-
-you'll always have a special place in my heart.
+The prettiest person
+my eyes have ever seen.
 
 </p>
 
-<h2>Forever Yours,<br>Yassine ❤️</h2>
+<div class="gallery">
+
+<img src="photo1.jpg">
+
+<img src="photo2.jpg">
+
+<img src="photo3.jpg">
+
+<img src="photo4.jpg">
+
+<img src="photo5.jpg">
+
+</div>
+
+<button id="finalBtn">
+
+One Last Surprise ❤️
+
+</button>
+
+</section>
+
+<!-- ===================== -->
+<!-- PAGE 6 -->
+<!-- FINAL -->
+<!-- ===================== -->
+
+<section id="finalPage" class="page">
+
+<div class="final-card">
+
+<h1>
+
+I Love You ❤️
+
+</h1>
+
+<p>
+
+No matter what happens...
+
+You'll always have a special place
+inside my heart.
+
+Thank you for being you.
+
+</p>
+
+<h2>
+
+Forever Yours,
+
+<br>
+
+Yassine ❤️
+
+</h2>
 
 <button onclick="location.reload()">
-Replay 💖
+
+Replay Surprise 💕
+
 </button>
+
+</div>
 
 </section>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
