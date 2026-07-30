@@ -11,8 +11,6 @@ const letterBtn = document.getElementById("letterBtn");
 const galleryBtn = document.getElementById("galleryBtn");
 const endBtn = document.getElementById("endBtn");
 
-// Music
-const music = document.getElementById("music");
 
 // Change page
 function showPage(page) {
@@ -26,10 +24,6 @@ function showPage(page) {
 // Welcome -> Flowers
 startBtn.onclick = () => {
     showPage(flowers);
-
-    music.play().catch(() => {
-        console.log("Music blocked until user interaction.");
-    });
 };
 
 // Flowers -> Letter
