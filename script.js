@@ -132,3 +132,86 @@ img.classList.toggle("zoom");
 };
 
 });
+// ==========================
+// Auto Move Between Inputs
+// ==========================
+
+[c1, c2, c3].forEach((input, index) => {
+
+    input.addEventListener("input", () => {
+
+        if (input.value.length === 2) {
+
+            const inputs = [c1, c2, c3];
+
+            if (inputs[index + 1]) {
+                inputs[index + 1].focus();
+            }
+
+        }
+
+    });
+
+});
+
+// ==========================
+// Enter Key Unlock
+// ==========================
+
+[c1, c2, c3].forEach(input => {
+
+    input.addEventListener("keypress", e => {
+
+        if (e.key === "Enter") {
+
+            unlockBtn.click();
+
+        }
+
+    });
+
+});
+
+// ==========================
+// Fade Animation
+// ==========================
+
+function fadePage(page){
+
+    page.style.opacity="0";
+
+    setTimeout(()=>{
+
+        page.style.opacity="1";
+
+    },100);
+
+}
+
+// ==========================
+// Hearts On Click
+// ==========================
+
+document.addEventListener("click",(e)=>{
+
+    const heart=document.createElement("div");
+
+    heart.innerHTML="❤️";
+
+    heart.style.position="fixed";
+    heart.style.left=e.clientX+"px";
+    heart.style.top=e.clientY+"px";
+    heart.style.fontSize="26px";
+    heart.style.pointerEvents="none";
+    heart.style.animation="heartPop 1.3s forwards";
+    heart.style.zIndex="9999";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },1300);
+
+});
