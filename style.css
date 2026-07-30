@@ -677,3 +677,14 @@ width:100%;
 }
 
 }
+.gallery img.zoom{
+
+transform:scale(1.25);
+
+z-index:999;
+
+position:relative;
+
+box-shadow:0 25px 60px rgba(0,0,0,.3);
+
+}
